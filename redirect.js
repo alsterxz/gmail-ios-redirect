@@ -9,7 +9,7 @@
     if (!/^[a-f0-9]{16,32}$/.test(rawId)) return null;
     if (!/^\d{1,2}$/.test(account)) return null;
 
-    return `googlegmail:///cv=${rawId}/accountId=${account}`;
+    return `googlegmail:///cv=${rawId}/accountId=${account}&create-new-tab`;
   }
 
   function openGmail() {

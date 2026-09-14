@@ -3,11 +3,11 @@ const { buildGmailUrl } = require('./redirect.js');
 
 assert.strictEqual(
   buildGmailUrl('?id=1a09ac9612eea73f'),
-  'googlegmail:///cv=1a09ac9612eea73f/accountId=0'
+  'googlegmail:///cv=1a09ac9612eea73f/accountId=0&create-new-tab'
 );
 assert.strictEqual(
   buildGmailUrl('?id=ABCDEF0123456789&account=1'),
-  'googlegmail:///cv=abcdef0123456789/accountId=1'
+  'googlegmail:///cv=abcdef0123456789/accountId=1&create-new-tab'
 );
 assert.strictEqual(buildGmailUrl('?id=../../malicious'), null);
 assert.strictEqual(buildGmailUrl('?id=1a09ac9612eea73f&account=x'), null);
