@@ -1,5 +1,8 @@
+const fs = require('fs');
 const assert = require('assert');
 const { buildGmailUrl } = require('./redirect.js');
+
+assert.match(fs.readFileSync('./index.html', 'utf8'), /redirect\.js\?v=2/);
 
 assert.strictEqual(
   buildGmailUrl('?id=1a09ac9612eea73f'),
